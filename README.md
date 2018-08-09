@@ -1,0 +1,26 @@
+# clockwebapp
+Small webapp where a user can select colours which are then used to style an analogue clock
+
+# Blog Post
+Wake up And Smell the Coffee
+The idea for a very small-scope JavaScript project came during a catch-up over coffee. I'm relatively new to the world of drinking hot, crushed beans to become more awake and so the caffeine hit me harder than your average person. This resulted in an itch to code. My friend and I decided to set ourselves a small scale project to get ourselves back into a coding mindset having distanced ourselves from everything computer science since summer exams. We decided to both create a very simple webapp where a user could select colours which would be used to style a real-time clock, not exactly rocket science, but something that could make us feel more confident developing for web and shake off the unpleasant association of Uni exams and programming.
+
+So the project was to create a web based clock with user input for styling. Very simple, even for us, so we decided to add a few of limitations. The end product had to be coded using vanilla HTML, CSS and JS - no bootstrap and no JS frameworks. The product should be compatible across all devices, and look uniform on mobile and desktop. And finally, we wanted the webapp to consist of one page only. No scrolling- only one web page. But still the product needed to have a clean, intuitive user experience that didn't need any explaining.
+
+## Ground 0
+I plunged into the thought process for this project with a few ideas already forming in my head. I've recently been using sites such as https://www.materialpalette.com/ and http://colormind.io/ to better understand colour theory. Material Palette has a great user interface which greatly inspired my direction to tackling this project. I decided early on I wanted a similar grid of colours that users could select as the user input half of this webapp. If you have been following along with any of my other entries to my blog you may have seen I have been undertaking the JavaScript 30 course by Wes Bos (https://javascript30.com/). The second day of this challenge was a clock, which I also decided to adapt to fit in with our clock part of our project guidelines.
+
+Getting my front-end legs back again
+To tackle the restriction of one web page with no scrolling whilst preserving a minimalist design I decided to split the project up into two halves. One half being the colour selection palette and the other being the clock. Each half would be contained within a div with only one ever being visible at the same time. Therefore allowing me to show all the parts of the project I needed to, without cluttering the page with menus and other intrusive elements.
+
+Immediately after starting I realised how glad I was to be coding again on something light hearted and for-fun. It felt as if the font end development process came to me more naturally than it ever has done previously- a lot fewer searches for W3Schools or MDN for every new element and style added which felt satisfying. The only minor point of frustration was CSS Grids didn't want to play nicely, but that's was almost expected considering how new the technology is and how infrequently I use it.
+
+The clock was a lot easier, however may be considered as cheating, as I used a lot of the same styling as was used in the JavaScript30 day 2 challenge. Drawing with CSS is something that I have found interesting very recently and is something I'd love to become more competent with in the future.
+
+## JS and DOM
+The idea for the inner workings of my webapp is very simple. Following my 2 half design for the HTML and CSS I decided to have 2 scripts. One to operate the clock and display the device time on an analogue display, and the other to accept user inputs to the colour palette and, using those, change the styling of the clock.
+The clock is made up of 3 hands, hours, minutes and seconds. Each are operated by getting the device's current time, and calculating a angle that the hand should be to represent this time. For example, to show and animate the hour hand, I got the current hour, divided it by 12 to receive a standardised value according to an analogue clock, multiplied it by 360 to get an angle and then offset that angle by 90 to account for the starting position of the clock hands. This value is then used in a transform rotate operation to show the hand moving around the clock.
+The colour selection script was simple too, it required a user to select 3 colours from the grid and then apply those colours to the clock styling. For each colour cell on the colour palette, I added an onclick event which would pull the ID of the selected element (all referred to with the colour's hex value), which was then added to a list (a colour can be removed from the selected list with the user re-clicking a currently selected colour). Once 3 colours had been clicked, the colour palette is hidden, the colour list is split up to apply to different clock element's styling and then the clock is made visible, completing the project.
+
+## The Final Product
+The final product's code is available publicly from my GitHub repo (https://github.com/llllQ/clockwebapp) and the final product can be viewed working live at https://llllq.github.io/clockwebapp/ hosted using GitHub Pages.
