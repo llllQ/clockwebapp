@@ -2,7 +2,7 @@
 Small webapp where a user can select colours which are then used to style an analogue clock
 
 # Blog Post
-Wake up And Smell the Coffee
+## Wake up And Smell the Coffee
 The idea for a very small-scope JavaScript project came during a catch-up over coffee. I'm relatively new to the world of drinking hot, crushed beans to become more awake and so the caffeine hit me harder than your average person. This resulted in an itch to code. My friend and I decided to set ourselves a small scale project to get ourselves back into a coding mindset having distanced ourselves from everything computer science since summer exams. We decided to both create a very simple webapp where a user could select colours which would be used to style a real-time clock, not exactly rocket science, but something that could make us feel more confident developing for web and shake off the unpleasant association of Uni exams and programming.
 
 So the project was to create a web based clock with user input for styling. Very simple, even for us, so we decided to add a few of limitations. The end product had to be coded using vanilla HTML, CSS and JS - no bootstrap and no JS frameworks. The product should be compatible across all devices, and look uniform on mobile and desktop. And finally, we wanted the webapp to consist of one page only. No scrolling- only one web page. But still the product needed to have a clean, intuitive user experience that didn't need any explaining.
